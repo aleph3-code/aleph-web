@@ -9,6 +9,7 @@ export default function Home() {
       <Section>
         <h1 className="text-4xl font-bold">Learn More</h1>
         <p className="mt-4 text-xl">
+          ℵ
           Visit our social media pages to learn more about us and our projects.
         </p>
       </Section>

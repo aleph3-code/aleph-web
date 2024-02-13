@@ -1,8 +1,12 @@
+import { Aleph } from "../Aleph";
+
 export default function Header() {
   return (
     <header className="flex fixed top-0 w-screen text-highlight">
       <nav className="flex w-full justify-between items-center px-20 py-4">
-        <h1 className="text-2xl font-bold text-highlight">Aleph Code</h1>
+        <h1 className="text-2xl font-bold text-highlight font-mono flex items-center gap-2 cursor-pointer">
+          <Aleph /> Aleph
+        </h1>
         <ul className="flex space-x-4">
           <li>
             <a href="#about">About</a>
