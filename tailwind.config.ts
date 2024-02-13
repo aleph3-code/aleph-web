@@ -14,6 +14,7 @@ const config: Config = {
             },
             backgroundImage: {
                 hero: "url('/assets/laptop.png')",
+                services: "url('/assets/background_placeholder.avif')",
             },
         },
     },
