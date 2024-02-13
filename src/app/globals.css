@@ -19,7 +19,8 @@
     @apply text-highlight;
 }
 
-:root {
+html {
+    scroll-behavior: smooth;
 }
 
 @layer utilities {
