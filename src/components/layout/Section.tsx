@@ -5,6 +5,15 @@ type SectionProps = Readonly<{
   className?: string;
 }>;
 
-export function Section({ children, className }: SectionProps) {
-  return <section className={twMerge("w-full px-20 py-16", className)}>{children}</section>;
+export default function Section({ children, className }: SectionProps) {
+  return (
+    <section
+      className={twMerge(
+        "w-full px-20 py-16 flex flex-col justify-center",
+        className
+      )}
+    >
+      {children}
+    </section>
+  );
 }
