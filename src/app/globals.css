@@ -41,12 +41,8 @@ html {
     }
 
     .glass {
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 16px;
+        @apply bg-white/20 border border-white/30 backdrop-blur-[7px] rounded-2xl;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(6.9px);
-        -webkit-backdrop-filter: blur(6.9px);
-        border: 1px solid rgba(255, 255, 255, 0.38);
     }
 }
 
