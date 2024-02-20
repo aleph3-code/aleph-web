@@ -19,6 +19,18 @@
     @apply text-highlight;
 }
 
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-accent-dark rounded-xl;
+}
+
 html {
     scroll-behavior: smooth;
 }

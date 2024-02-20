@@ -11,6 +11,10 @@ const config: Config = {
             colors: {
                 background: '#0e0a1a',
                 highlight: '#f9f9f9',
+                accent: {
+                    "light": "#51267e",
+                    "dark": "#2d1b3a",
+                },
             },
             backgroundImage: {
                 hero: "url('/assets/laptop.png')",
