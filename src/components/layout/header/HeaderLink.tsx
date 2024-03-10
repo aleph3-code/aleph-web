@@ -1,9 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { ActiveSectionContext, SectionID } from '../ActiveSectionContext';
 import { useContext } from 'react';
 import { twMerge } from 'tailwind-merge';
+import { ActiveSectionContext, SectionID } from '../ActiveSectionContext';
 
 export type HeaderLinkProps = { id: SectionID; text: string };
 

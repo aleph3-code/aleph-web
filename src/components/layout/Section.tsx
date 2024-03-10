@@ -1,9 +1,10 @@
 'use client';
 
 import { twMerge } from 'tailwind-merge';
-import { ActiveSectionContext, SectionID } from './ActiveSectionContext';
 import { useInView } from 'react-intersection-observer';
 import { useContext, useEffect } from 'react';
+
+import { ActiveSectionContext, SectionID } from './ActiveSectionContext';
 
 type SectionProps = Readonly<{
     children: React.ReactNode;

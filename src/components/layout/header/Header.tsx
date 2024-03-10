@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Aleph } from '../../Aleph';
+import { Aleph } from '~/components/Aleph';
 import { HeaderLink, HeaderLinkProps } from './HeaderLink';
 
 const navLinks: HeaderLinkProps[] = [
