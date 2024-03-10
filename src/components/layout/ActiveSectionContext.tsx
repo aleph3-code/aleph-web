@@ -4,6 +4,7 @@ import { createContext, useCallback, useMemo, useState } from 'react';
 export type SectionID =
     | 'hero'
     | 'services'
+    | 'tools'
     | 'projects'
     | 'about-us'
     | 'contact';
