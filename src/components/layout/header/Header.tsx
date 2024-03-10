@@ -1,12 +1,6 @@
-'use client';
-
 import Link from 'next/link';
-import { Aleph } from '../Aleph';
-import { ActiveSectionContext, SectionID } from './ActiveSectionContext';
-import { useContext } from 'react';
-import { twMerge } from 'tailwind-merge';
-
-type HeaderLinkProps = { id: SectionID; text: string };
+import { Aleph } from '../../Aleph';
+import { HeaderLink, HeaderLinkProps } from './HeaderLink';
 
 const navLinks: HeaderLinkProps[] = [
     { id: 'services', text: 'Services' },
@@ -15,24 +9,6 @@ const navLinks: HeaderLinkProps[] = [
     { id: 'about-us', text: 'About' },
     { id: 'contact', text: 'Contact' },
 ];
-
-function HeaderLink({ id, text }: HeaderLinkProps) {
-    const { activeSection } = useContext(ActiveSectionContext)!;
-    const isActive = activeSection === id;
-
-    return (
-        <Link href={`#${id}`}>
-            <span
-                className={twMerge(
-                    'cursor-pointer underline-animation relative',
-                    isActive && 'active',
-                )}
-            >
-                {text}
-            </span>
-        </Link>
-    );
-}
 
 export default function Header() {
     return (
