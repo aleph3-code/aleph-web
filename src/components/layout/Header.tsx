@@ -1,5 +1,38 @@
+'use client';
+
 import Link from 'next/link';
 import { Aleph } from '../Aleph';
+import { ActiveSectionContext, SectionID } from './ActiveSectionContext';
+import { useContext } from 'react';
+import { twMerge } from 'tailwind-merge';
+
+type HeaderLinkProps = { id: SectionID; text: string };
+
+const navLinks: HeaderLinkProps[] = [
+    { id: 'services', text: 'Services' },
+    { id: 'tools', text: 'Tools' },
+    { id: 'projects', text: 'Projects' },
+    { id: 'about-us', text: 'About' },
+    { id: 'contact', text: 'Contact' },
+];
+
+function HeaderLink({ id, text }: HeaderLinkProps) {
+    const { activeSection } = useContext(ActiveSectionContext)!;
+    const isActive = activeSection === id;
+
+    return (
+        <Link href={`#${id}`}>
+            <span
+                className={twMerge(
+                    'cursor-pointer underline-animation relative',
+                    isActive && 'active',
+                )}
+            >
+                {text}
+            </span>
+        </Link>
+    );
+}
 
 export default function Header() {
     return (
@@ -10,23 +43,11 @@ export default function Header() {
                         <Aleph /> Aleph
                     </h1>
                 </Link>
-                <ul className="flex space-x-4">
-                    <li>
-                        <Link href="#services">Services</Link>
-                    </li>
-                    <li>
-                        <Link href="#tools">Tools</Link>
-                    </li>
-                    <li>
-                        <Link href="#projects">Projects</Link>
-                    </li>
-                    <li>
-                        <Link href="#about">About</Link>
-                    </li>
-                    <li>
-                        <Link href="#contact">Contact</Link>
-                    </li>
-                </ul>
+                <div className="flex space-x-4">
+                    {navLinks.map((linkProps) => (
+                        <HeaderLink key={linkProps.id} {...linkProps} />
+                    ))}
+                </div>
             </nav>
         </header>
     );

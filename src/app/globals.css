@@ -44,6 +44,27 @@ html {
         @apply bg-white/20 border border-white/30 backdrop-blur-[7px] rounded-2xl;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     }
+
+    .underline-animation:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        /* TODO: get tailwind theme color */
+        @apply bg-highlight;
+        transform-origin: bottom right;
+        transition: transform 0.4s ease;
+    }
+    
+    .underline-animation:hover:after,
+    .active:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+    
 }
 
 @layer base {
